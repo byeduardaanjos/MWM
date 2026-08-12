@@ -34,31 +34,15 @@ a { color: inherit; text-decoration: none; }
   -webkit-backdrop-filter: blur(4px);
 }
 .brand {
-  display: flex; align-items: center; gap: 11px;
+  display: flex;
+  align-items: center;
 }
-.brand strong {
-  position: relative;
-  color: #f4f1ec;
-  font-size: 25px;
-  line-height: 1;
-  font-weight: 850;
-  letter-spacing: -.055em;
-}
-.brand strong::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -7px;
-  height: 2px;
-  background: var(--red);
-}
-.brand small {
-  max-width: none;
-  color: #777570;
-  font-size: 7px;
-  line-height: 1.3;
-  letter-spacing: .14em;
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 66px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .34));
 }
 nav { display: flex; gap: 42px; font-size: 11px; letter-spacing: .08em; color: #c5c1bc; }
 nav a:hover { color: white; }
@@ -548,8 +532,7 @@ footer a svg { color: var(--red); }
     background: linear-gradient(180deg, rgba(3,3,4,.68) 0%, rgba(3,3,4,.22) 64%, transparent 100%);
     border-bottom-color: rgba(255,255,255,.06);
   }
-  .brand strong { font-size: 22px; }
-  .brand small { display: none; }
+  .brand-logo { height: 50px; }
   .header-contact {
     padding: 8px 11px;
     border-color: rgba(255,255,255,.28);

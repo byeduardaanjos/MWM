@@ -55,8 +55,11 @@ export default function Home() {
       <MotionEffects />
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="MWM Segurança - início">
-          <strong>MWM</strong>
-          <small>SEGURANÇA<br />ELETRÔNICA</small>
+          <img
+            className="brand-logo"
+            src="/assets/mwm-logo-oficial.png"
+            alt="MWM Segurança Eletrônica"
+          />
         </a>
         <nav aria-label="Navegação principal">
           <a href="#inicio">Início</a>
