@@ -14,6 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 import { QuoteForm } from "@/components/QuoteForm";
+import { MotionEffects } from "@/components/MotionEffects";
 
 const services = [
   {
@@ -51,6 +52,7 @@ const services = [
 export default function Home() {
   return (
     <main>
+      <MotionEffects />
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="MWM Segurança - início">
           <strong>MWM</strong>
