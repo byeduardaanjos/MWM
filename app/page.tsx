@@ -13,6 +13,7 @@ import {
   Video,
   Zap,
 } from "lucide-react";
+import Image from "next/image";
 import { QuoteForm } from "@/components/QuoteForm";
 import { MotionEffects } from "@/components/MotionEffects";
 
@@ -21,31 +22,43 @@ const services = [
     title: "Câmeras e monitoramento",
     text: "Monitoramento residencial e comercial com acesso às imagens pelo celular.",
     icon: Camera,
+    image: "/assets/services/cameras-monitoramento.webp",
+    imageAlt: "Pessoa acompanhando quatro câmeras de segurança pelo celular",
   },
   {
     title: "Alarmes",
     text: "Sistemas eficientes para reforçar a segurança do seu espaço.",
     icon: Siren,
+    image: "/assets/services/alarmes.webp",
+    imageAlt: "Mão digitando em um teclado de alarme instalado na parede",
   },
   {
     title: "Cerca elétrica",
     text: "Proteção perimetral para residências e estabelecimentos.",
     icon: Zap,
+    image: "/assets/services/cerca-eletrica.webp",
+    imageAlt: "Cerca elétrica instalada sobre muro com placa de perigo",
   },
   {
     title: "Interfones e vídeo porteiros",
     text: "Mais controle e praticidade para identificar quem chega ao seu imóvel.",
     icon: Video,
+    image: "/assets/services/video-porteiros.webp",
+    imageAlt: "Vídeo porteiro instalado na parede mostrando um entregador",
   },
   {
     title: "Automação de portões",
     text: "Instalação e configuração para entradas mais práticas e seguras.",
     icon: DoorOpen,
+    image: "/assets/services/automacao-portoes.webp",
+    imageAlt: "Motor de automação instalado na parte inferior de um portão",
   },
   {
     title: "Controle de acesso",
     text: "Soluções para organizar e proteger o acesso de pessoas ao seu espaço.",
     icon: KeyRound,
+    image: "/assets/services/controle-acesso.webp",
+    imageAlt: "Pessoa passando um cartão no leitor de uma catraca",
   },
 ];
 
@@ -97,11 +110,22 @@ export default function Home() {
             const Icon = service.icon;
             return (
             <article key={service.title}>
-              <div className="service-icon">
-                <Icon size={25} strokeWidth={1.6} aria-hidden="true" />
+              <div className="service-media">
+                <Image
+                  src={service.image}
+                  alt={service.imageAlt}
+                  width={1280}
+                  height={720}
+                  sizes="(max-width: 800px) 100vw, 33vw"
+                />
+                <div className="service-icon">
+                  <Icon size={22} strokeWidth={1.7} aria-hidden="true" />
+                </div>
               </div>
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
+              <div className="service-content">
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </div>
             </article>
             );
           })}
