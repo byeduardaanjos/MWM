@@ -74,6 +74,7 @@ export default function Home() {
         <nav aria-label="Navegação principal">
           <a href="#inicio">Início</a>
           <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre</a>
           <a href="#contato">Contato</a>
         </nav>
         <a className="header-contact" href="#contato">
@@ -129,6 +130,40 @@ export default function Home() {
             </article>
             );
           })}
+        </div>
+      </section>
+
+      <section className="about" id="sobre">
+        <div className="about-photo">
+          <Image
+            src="/assets/central-mwm.webp"
+            alt="Central de monitoramento da MWM Segurança Eletrônica"
+            width={864}
+            height={1222}
+            sizes="(max-width: 800px) 100vw, 46vw"
+          />
+          <span>Grande Florianópolis e regiões</span>
+        </div>
+        <div className="about-content">
+          <p className="label"><span /> SOBRE A MWM</p>
+          <h2>Segurança que começa com planejamento.</h2>
+          <p className="about-lead">
+            A MWM Segurança Eletrônica oferece soluções personalizadas para proteger residências,
+            comércios, condomínios e empresas.
+          </p>
+          <p>
+            Cada projeto é pensado de acordo com o espaço e a necessidade do cliente, unindo
+            equipamentos adequados, instalação cuidadosa e atendimento próximo do início ao fim.
+          </p>
+          <div className="about-highlights">
+            <span><ShieldCheck size={18} aria-hidden="true" /> Projeto personalizado</span>
+            <span><Camera size={18} aria-hidden="true" /> Tecnologia e controle</span>
+            <span><MessageCircle size={18} aria-hidden="true" /> Atendimento próximo</span>
+          </div>
+          <a className="about-link" href="#contato">
+            Falar com a MWM
+            <ArrowRight size={17} aria-hidden="true" />
+          </a>
         </div>
       </section>
 
